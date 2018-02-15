@@ -18,29 +18,44 @@ Comes with a custom user model, social authentication, and email/password for si
 ## First-time setup
 
 1. Make sure Python 3.6x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
-2. Install packages with `pipenv install`
-3. Activate a virtual environment with `pipenv shell`
-4. Set up the initial migration for our custom user models in `users`
+2. Clone the repo and configure the virtualenv:
 
-   $ python manage.py makemigrations users
+```
+$ git clone https://github.com/wsvincent/djangox.git
+$ cd djangox
+$ pipenv install
+$ pipenv shell
+```
 
-5. Build the database schema:
+3. Set up the initial migration for our custom user models in `users`
 
-   $ python manage.py migrate
+```
+(djangox) $ python manage.py makemigrations users
+```
 
-6. Create a superuser:
+4. Build the database schema:
 
-   $ python manage.py createsuperuser
+```
+(djangox) $ python manage.py migrate
+```
 
-7. Confirm everything is working:
+5. Create a superuser:
 
-   $ python manage.py runserver
+```
+$ python manage.py createsuperuser
+```
 
-   Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+6. Confirm everything is working:
 
-   Click on links for "Sign up" or "Log in."
+```
+$ python manage.py runserver
+```
 
-8. This is optional but I also recommend logging into admin and changing the default site:
+Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+
+Click on links for "Sign up" or "Log in."
+
+7. (Optional) I also recommend logging into admin and changing the default site:
 
    Go to [http://127.0.0.1:8000/admin]([http://127.0.0.1:8000/admin]). You may need to logout and then login with your superuser account.
 
