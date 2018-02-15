@@ -42,13 +42,13 @@ $ pipenv shell
 5. Create a superuser:
 
 ```
-$ python manage.py createsuperuser
+(djangox) $ python manage.py createsuperuser
 ```
 
 6. Confirm everything is working:
 
 ```
-$ python manage.py runserver
+(djangox) $ python manage.py runserver
 ```
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
