@@ -79,4 +79,4 @@ Click on links for "Sign up" or "Log in."
 
 ## Acknowledgments
 
-This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). It's my own preferred template for starting new projects built out of a personal desire to actually understand all the config magic in `cookiecutter-django`.
+This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). I initially built DjangoX out of a desire to understand all the config magic in `cookiecutter-django`.
