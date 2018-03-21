@@ -86,4 +86,4 @@ Click on links for "Sign up" or "Log in."
 
 ## Acknowledgments
 
-This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). I initially built DjangoX out of a desire to understand all the config magic in it.
+This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). If you're looking for an even more advanced framework that comes with deployment configurations, give it a look!
