@@ -1,19 +1,26 @@
 # DjangoX
 
-**DjangoX** - A framework for launching new Django projects quickly.
-
-Comes with a custom user model, social authentication, and email/password for sign up and log in.
-
-![Falconx](static/images/falconx.png)
+A framework for launching new Django projects quickly. Includes a complete user authentication flow: signup, login, and forget password. And easily extendable to include social authentication via Gmail, Facebook, Twitter, etc.
 
 ## Features
 
 * Django 2.0 and Python 3.6
+* Uses email/password for login/signup
+* [django-allauth](https://github.com/pennersr/django-allauth) for easy social authentication
+* Custom user model
 * [Pipenv](https://github.com/pypa/pipenv) for virtualenvs
-* User registration via [django-allauth](https://github.com/pennersr/django-allauth)
-* Add social auth via Google, Facebook, etc
 * [Bootstrap v4](https://getbootstrap.com/)
-* Custom user model with email and no username
+
+![Sign up](static/images/signup.png)
+
+![Log in](static/images/login.png)
+
+![Forget password](static/images/forgetpassword.png)
+
+![Home](static/images/home.png)
+
+![About](static/images/about.png)
+
 
 ## First-time setup
 
