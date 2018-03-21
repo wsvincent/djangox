@@ -9,5 +9,5 @@ urlpatterns = [
 
     # User management
     path('users/', include('users.urls')),
-    path('accounts/', include('allauth.urls')), # new
+    path('accounts/', include('allauth.urls')),
 ]

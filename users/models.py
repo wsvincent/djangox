@@ -1,9 +1,10 @@
 from django.contrib.auth.models import AbstractUser, UserManager
-
-
-class CustomUserManager(UserManager):
-    pass
+from django.db import models
 
 
 class CustomUser(AbstractUser):
-    objects = CustomUserManager()
+    # First/last name is not a global-friendly pattern
+    name = models.CharField(blank=True, max_length=255)
+
+    def __str__(self):
+        return self.email
