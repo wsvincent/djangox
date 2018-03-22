@@ -1,6 +1,6 @@
 # DjangoX
 
-A framework for launching new Django projects quickly. Includes a complete user authentication flow: signup, login, and forget password. And easily extendable to include social authentication via Gmail, Facebook, Twitter, etc.
+A framework for launching new Django projects quickly with a complete user authentication flow, custom user model, and social authentication options via Gmail, Facebook, Twitter, etc.
 
 ## Features
 
@@ -13,19 +13,18 @@ A framework for launching new Django projects quickly. Includes a complete user 
 
 ![Sign up](static/images/signup.png)
 
-![Log in](static/images/login.png)
+<!-- ![Log in](static/images/login.png)
 
-![Forget password](static/images/forgetpassword.png)
+![Forget password](static/images/forgetpassword.png) -->
 
 ![Home](static/images/home.png)
 
-![About](static/images/about.png)
-
+<!-- ![About](static/images/about.png) -->
 
 ## First-time setup
 
-1. Make sure Python 3.6x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
-2. Clone the repo and configure the virtualenv:
+1.  Make sure Python 3.6x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
+2.  Clone the repo and configure the virtualenv:
 
 ```
 $ git clone https://github.com/wsvincent/djangox.git
@@ -34,25 +33,20 @@ $ pipenv install
 $ pipenv shell
 ```
 
-3. Set up the initial migration for our custom user models in `users`
+3.  Set up the initial migration for our custom user models in `users` and build the database.
 
 ```
 (djangox) $ python manage.py makemigrations users
-```
-
-4. Build the database schema:
-
-```
 (djangox) $ python manage.py migrate
 ```
 
-5. Create a superuser:
+4.  Create a superuser:
 
 ```
 (djangox) $ python manage.py createsuperuser
 ```
 
-6. Confirm everything is working:
+5.  Confirm everything is working:
 
 ```
 (djangox) $ python manage.py runserver
@@ -60,13 +54,11 @@ $ pipenv shell
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-Click on links for "Sign up" or "Log in."
+6.  (Optional) Log into the admin and changing the default site:
 
-7. (Optional) I also recommend logging into admin and changing the default site:
+    Go to [http://127.0.0.1:8000/admin]([http://127.0.0.1:8000/admin]). You may need to logout and then login with your superuser account.
 
-   Go to [http://127.0.0.1:8000/admin]([http://127.0.0.1:8000/admin]). You may need to logout and then login with your superuser account.
-
-   Navigate to [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) and change the default "example.com" to "127.0.0.1" and the name to "<YOUR_PROJECT_NAME>" for local development.
+    Navigate to [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) and change the default "example.com" to "127.0.0.1" and the name to "<YOUR_PROJECT_NAME>" for local development.
 
 ## Recommendations
 
