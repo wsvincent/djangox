@@ -54,11 +54,7 @@ $ pipenv shell
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-6.  (Optional) Log into the admin and changing the default site:
-
-    Go to [http://127.0.0.1:8000/admin]([http://127.0.0.1:8000/admin]). You may need to logout and then login with your superuser account.
-
-    Navigate to [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) and change the default "example.com" to "127.0.0.1" and the name to "<YOUR_PROJECT_NAME>" for local development.
+6.  (Optional) Under "Sites" in the admin  [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) change "example.com" to "127.0.0.1" and the name to whatever your project is called, for example `djangox`.
 
 ## Recommendations
 
