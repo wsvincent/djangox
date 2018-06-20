@@ -2,6 +2,8 @@
 
 A framework for launching new Django projects quickly with a complete user authentication flow, custom user model, and social authentication options via Gmail, Facebook, Twitter, etc.
 
+> **NOTE**: This open source project is supported by my two published books [Django for Beginners and REST APIs with Django](https://wsvincent.com/books/). Learn how to build, test, and deploy websites with Django.
+
 ## Features
 
 - Django 2.0 and Python 3.6
