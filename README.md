@@ -10,6 +10,7 @@ A framework for launching new Django projects quickly with a complete user authe
 - Social authentication via [django-allauth](https://github.com/pennersr/django-allauth)
 - Modern virtual environments with [pipenv](https://github.com/pypa/pipenv)
 - Styling with [Bootstrap v4](https://getbootstrap.com/)
+- [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 
 ![Sign up](static/images/signup.png)
 
