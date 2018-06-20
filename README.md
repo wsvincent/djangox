@@ -4,12 +4,12 @@ A framework for launching new Django projects quickly with a complete user authe
 
 ## Features
 
-* Django 2.0 and Python 3.6
-* Uses email/password for login/signup
-* [django-allauth](https://github.com/pennersr/django-allauth) for easy social authentication
-* Custom user model
-* [Pipenv](https://github.com/pypa/pipenv) for virtualenvs
-* [Bootstrap v4](https://getbootstrap.com/)
+- Django 2.0 and Python 3.6
+- Email/password for log in/sign up instead of default username/email/password pattern
+- Custom user model
+- Social authentication via [django-allauth](https://github.com/pennersr/django-allauth)
+- Modern virtual environments with [pipenv](https://github.com/pypa/pipenv)
+- Styling with [Bootstrap v4](https://getbootstrap.com/)
 
 ![Sign up](static/images/signup.png)
 
@@ -54,23 +54,23 @@ $ pipenv shell
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-6.  (Optional) Under "Sites" in the admin  [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) change "example.com" to "127.0.0.1" and the name to whatever your project is called, for example `djangox`.
+6.  (Optional) Under "Sites" in the admin [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) change "example.com" to "127.0.0.1" and the name to whatever your project is called, for example `djangox`.
 
 ## Recommendations
 
-* Use [PostgreSQL locally via Docker](https://wsvincent.com/django-docker-postgresql/)
-* Use [django-environ](https://github.com/joke2k/django-environ) for environment variables
-* Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/2.0/topics/email/#module-django.core.mail) to configure an SMTP backend
-* Add [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) and [django-extensions](https://github.com/django-extensions/django-extensions)
+- Use [PostgreSQL locally via Docker](https://wsvincent.com/django-docker-postgresql/)
+- Use [django-environ](https://github.com/joke2k/django-environ) for environment variables
+- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/2.0/topics/email/#module-django.core.mail) to configure an SMTP backend
+- Add [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) and [django-extensions](https://github.com/django-extensions/django-extensions)
 
-* Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
+- Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
 
 ## Adding Social Authentication
 
-* [Configuring Google](https://wsvincent.com/django-allauth-tutorial-custom-user-model/#google-credentials)
-* [Configuring Facebook](http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/#Create_and_configure_a_Facebook_app)
-* [Configuring Github](https://wsvincent.com/django-allauth-tutorial/)
-* `django-allauth` supports [many, many other providers in the official docs](https://django-allauth.readthedocs.io/en/latest/providers.html)
+- [Configuring Google](https://wsvincent.com/django-allauth-tutorial-custom-user-model/#google-credentials)
+- [Configuring Facebook](http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/#Create_and_configure_a_Facebook_app)
+- [Configuring Github](https://wsvincent.com/django-allauth-tutorial/)
+- `django-allauth` supports [many, many other providers in the official docs](https://django-allauth.readthedocs.io/en/latest/providers.html)
 
 ## Acknowledgments
 
