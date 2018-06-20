@@ -30,7 +30,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link dropdown-toggle" href="#" id="userMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                {{ user.username }}
+                {{ user.email }}
               </a>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
                 <a class="dropdown-item" href="{% url 'account_change_password' %}">Change password</a>

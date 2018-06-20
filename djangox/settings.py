@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     # 'allauth.socialaccount.providers.google',
     'crispy_forms',
+    'debug_toolbar',
 
     # Local
     'users',
@@ -43,6 +44,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'djangox.urls'
@@ -116,8 +118,11 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# Bootstrap Crispy-Forms config
+# Bootstrap Crispy-Forms settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# django-debug-toolbar settings
+INTERNAL_IPS = ['127.0.0.1']
 
 # Authentication settings
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -128,16 +133,28 @@ AUTHENTICATION_BACKENDS = (
 )
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+# DJANGO-ALLAUTH SETTINGS
+# Site id required for using 'sites' framework with django-allauth
 SITE_ID = 1
+
 LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
-ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_USERNAME_MIN_LENGTH = 3
-ACCOUNT_EMAIL_VERIFICATION = 'optional'  # set this to 'mandatory'?
-ACCOUNT_UNIQUE_EMAIL = True
-# ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
+
+# Don't collect usernames, use email instead
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+
+# default is 'True', use 'optional' for development purposes
+ACCOUNT_EMAIL_VERIFICATION = 'optional'
+
+ACCOUNT_UNIQUE_EMAIL = True
+
+# default is 'True', only force user to enter password once
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
+
+# controls life time of the session, default is 'None' to ask user "Remember me?"
 ACCOUNT_SESSION_REMEMBER = True
