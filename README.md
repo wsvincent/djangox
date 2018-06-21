@@ -6,12 +6,12 @@ A framework for launching new Django projects quickly with a complete user authe
 
 ## Features
 
-- Django 2.0 and Python 3.6
-- Email/password for log in/sign up instead of default username/email/password pattern
-- Custom user model
-- Social authentication via [django-allauth](https://github.com/pennersr/django-allauth)
+- For Django 2.0 and Python 3.6
 - Modern virtual environments with [pipenv](https://github.com/pypa/pipenv)
-- Styling with [Bootstrap v4](https://getbootstrap.com/)
+- Styling with [Bootstrap](https://github.com/twbs/bootstrap) v4.1.1
+- User registration and support for social authentication via [django-allauth](https://github.com/pennersr/django-allauth)
+- Email/password for log in/sign up instead of Django's default username/email/password pattern
+- Custom user model
 - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 
 ![Sign up](static/images/signup.png)
@@ -56,8 +56,6 @@ $ pipenv shell
 ```
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
-6.  (Optional) Under "Sites" in the admin [http://127.0.0.1:8000/admin/sites/site/](http://127.0.0.1:8000/admin/sites/site/) change "example.com" to "127.0.0.1" and the name to whatever your project is called, for example `djangox`.
 
 ## Next Steps
 
