@@ -4,9 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django-allauth = "*"
 django-crispy-forms = "*"
 django-debug-toolbar = "*"
 django = "*"
+django-allauth = "*"
 
 [dev-packages]

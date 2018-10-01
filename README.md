@@ -51,11 +51,11 @@ Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 ![Sign up](static/images/signup.png)
 
-![Log in](static/images/login.png)
+<!-- ![Log in](static/images/login.png)
 
 ![About](static/images/about.png)
 
-![Forget password](static/images/forgetpassword.png)
+![Forget password](static/images/forgetpassword.png) -->
 
 ## Next Steps
 
@@ -81,4 +81,4 @@ The first 4 chapters are available for free online at [https://djangoforbeginner
 
 ## Acknowledgments
 
-This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). If you're looking for an even more advanced framework that comes with deployment configurations, give it a look!The first 4 chapters are available for free online at [https://djangoforbeginners.com/](https://djangoforbeginners.com/).
+This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). If you're looking for an even more advanced framework that comes with deployment configurations, give it a look!

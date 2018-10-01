@@ -142,15 +142,12 @@ LOGIN_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
 
-# Don't collect usernames, use email instead
-ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+# # Don't collect usernames, use email instead
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'username'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_UNIQUE_EMAIL = True
-
-# default is 'True', use 'optional' for development purposes
-ACCOUNT_EMAIL_VERIFICATION = 'optional'
 
 # default is 'True', only force user to enter password once
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
