@@ -78,7 +78,3 @@ Want to build _DjangoX_ from scratch and understand how it all really works? Che
 The first 4 chapters are available for free online at [https://djangoforbeginners.com/](https://djangoforbeginners.com/).
 
 [![Django for Beginners](https://wsvincent.com/assets/images/dfb_cover300.jpg)](https://djangoforbeginners.com)
-
-## Acknowledgments
-
-This project is heavily inspired by [cookiecutter-django](https://github.com/pydanny/cookiecutter-django). If you're looking for an even more advanced framework that comes with deployment configurations, give it a look!
