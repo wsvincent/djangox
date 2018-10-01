@@ -147,11 +147,10 @@ ACCOUNT_USER_MODEL_USERNAME_FIELD = None
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_UNIQUE_EMAIL = True
 
 # default is 'True', use 'optional' for development purposes
 ACCOUNT_EMAIL_VERIFICATION = 'optional'
-
-ACCOUNT_UNIQUE_EMAIL = True
 
 # default is 'True', only force user to enter password once
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
