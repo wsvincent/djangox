@@ -1,12 +1,16 @@
 [[source]]
-url = "https://pypi.python.org/simple"
+url = "https://pypi.org/simple"
 verify_ssl = true
 name = "pypi"
 
 [packages]
-django-crispy-forms = "*"
-django-debug-toolbar = "*"
 django = "*"
 django-allauth = "*"
+django-crispy-forms = "*"
 
 [dev-packages]
+"autopep8" = "*"
+pylint = "*"
+
+[requires]
+python_version = "3.7"
