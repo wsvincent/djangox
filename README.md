@@ -17,7 +17,7 @@ A framework for launching new Django projects quickly. Comes with a complete use
 ## First-time setup
 
 1.  Make sure Python 3.7x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
-2.  Clone the repo and configure the virtualenv:
+2.  Clone the repo and configure the virtual environment:
 
 ```
 $ git clone https://github.com/wsvincent/djangox.git
