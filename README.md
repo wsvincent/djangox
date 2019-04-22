@@ -6,7 +6,7 @@ A framework for launching new Django projects quickly. Comes with a complete use
 
 ## Features
 
-- For Django 2.1 and Python 3.7
+- For Django 2.2 and Python 3.7
 - Modern virtual environments with [pipenv](https://github.com/pypa/pipenv)
 - Styling with [Bootstrap](https://github.com/twbs/bootstrap) v4.1.3
 - Custom user model
@@ -47,15 +47,9 @@ $ pipenv shell
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
-![Home](static/images/home.png)
+![Home](static/images/home_2.2.png)
 
-![Sign up](static/images/signup.png)
-
-<!-- ![Log in](static/images/login.png)
-
-![About](static/images/about.png)
-
-![Forget password](static/images/forgetpassword.png) -->
+![Sign Up](static/images/signup_2.2.png)
 
 ## Next Steps
 
