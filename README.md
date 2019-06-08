@@ -1,4 +1,4 @@
-# DjangoX
+<img width="400" src="logo.png" alt="DjangoX logo">
 
 A framework for launching new Django projects quickly. Comes with a complete user authentication flow, custom user model, and social authentication options via Gmail, Facebook, Twitter, etc.
 
