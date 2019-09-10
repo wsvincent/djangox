@@ -55,7 +55,7 @@ Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 
 - Use [PostgreSQL locally via Docker](https://wsvincent.com/django-docker-postgresql/)
 - Use [django-environ](https://github.com/joke2k/django-environ) for environment variables
-- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/2.0/topics/email/#module-django.core.mail) to configure an SMTP backend
+- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/2.2/topics/email/#module-django.core.mail) to configure an SMTP backend
 - Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
 
 ## Adding Social Authentication
