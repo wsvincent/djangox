@@ -2,7 +2,7 @@
 
 A framework for launching new Django projects quickly. Comes with a complete user authentication flow, custom user model, and social authentication options via Gmail, Facebook, Twitter, etc.
 
-> **NOTE**: This open source project is supported by my two published books [Django for Beginners](https://djangoforbeginners.com/) and [Django for APIs](https://djangoforapis.com). Both of which have the first few chapters available for free online. Please take a look!
+> **NOTE**: This open source project is supported by my three published books: [Django for Beginners](https://djangoforbeginners.com/), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com). The first few chapters of each book are available for free online. Please take a look!
 
 ## Features
 
