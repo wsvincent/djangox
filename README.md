@@ -1,8 +1,8 @@
 <img width="400" src="logo.png" alt="DjangoX logo">
 
-A framework for launching new Django projects quickly. Comes with a complete user authentication flow, custom user model, and social authentication options via Gmail, Facebook, Twitter, etc.
+A framework for launching new Django projects quickly. Comes with a custom user model, email/password authentication, options for social authentication via Google/Facebook/Twitter/etc, and static assets.
 
-> **NOTE**: This open source project is supported by my three published books: [Django for Beginners](https://djangoforbeginners.com/), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com). The first few chapters of each book are available for free online. Please take a look!
+> **NOTE**: This open source project is supported by my three published books: [Django for Beginners](https://djangoforbeginners.com/), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
 ## Features
 
