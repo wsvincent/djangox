@@ -1,12 +1,12 @@
 <img width="400" src="logo.png" alt="DjangoX logo">
 
-A framework for launching new Django projects quickly. Comes with a custom user model, email/password authentication, options for social authentication via Google/Facebook/Twitter/etc, and static assets.
+## A Django starter project that "just works."
 
 > **NOTE**: This open source project is supported by my three published books: [Django for Beginners](https://djangoforbeginners.com/), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
 ## Features
 
-- For Django 2.2 and Python 3.7
+- For Django 3.0 and Python 3.7
 - Modern virtual environments with [pipenv](https://github.com/pypa/pipenv)
 - Styling with [Bootstrap](https://github.com/twbs/bootstrap) v4.1.3
 - Custom user model
@@ -50,6 +50,15 @@ Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
 ![Home](static/images/home_2.2.png)
 
 ![Sign Up](static/images/signup_2.2.png)
+
+6. To customize the name of the project, update 3 files by replacing "djangox_project" with your desired name:
+
+* `manage.py`
+* `djangox_project/settings.py`
+* `djangox_project/wsgi.py`
+
+It's also possible to change the `djangox_project` directory to your desired project name.
+
 
 ## Next Steps
 
