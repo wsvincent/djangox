@@ -13,7 +13,7 @@
 * [x] Django 3.0 & Python 3.7
 * [x] Custom user model
 * [x] Email/password for user registration and log in
-* [x] Static files properly configured
+* [x] Static files properly configured, including Favicon
 * [x] [django-allauth](https://github.com/pennersr/django-allauth) for social authentication
 * [x] [Bootstrap](https://github.com/twbs/bootstrap) for styling
 * [x] [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
@@ -53,10 +53,6 @@ $ pipenv shell
 ```
 
 Load the site at [http://127.0.0.1:8000](http://127.0.0.1:8000).
-
-![Home](static/images/home_2.2.png)
-
-![Sign Up](static/images/signup_2.2.png)
 
 6. To customize the name of the project, update 3 files by replacing "djangox_project" with your desired name:
 
