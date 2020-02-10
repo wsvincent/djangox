@@ -4,6 +4,10 @@
 
 > **NOTE**: This open source project is supported by [LearnDjango.com](https://learndjango.com) which has free tutorials and premium courses.
 
+## Demo
+
+![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
+
 ## Features
 
 * [x] Django 3.0 & Python 3.7
@@ -13,11 +17,13 @@
 * [x] [django-allauth](https://github.com/pennersr/django-allauth) for social authentication
 * [x] [Bootstrap](https://github.com/twbs/bootstrap) for styling
 * [x] [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
+* [x] [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
 
 
 ## First-time setup
 
 1.  Make sure Python 3.7x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
+
 2.  Clone the repo and configure the virtual environment:
 
 ```
