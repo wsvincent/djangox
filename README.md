@@ -6,13 +6,15 @@
 
 ## Features
 
-- For Django 3.0 and Python 3.7
-- Modern virtual environments with [pipenv](https://github.com/pypa/pipenv)
-- Styling with [Bootstrap](https://github.com/twbs/bootstrap) v4.1.3
-- Custom user model
-- Email/password for log in/sign up instead of Django's default username/email/password pattern
-- Social authentication via [django-allauth](https://github.com/pennersr/django-allauth)
-- [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
+* [x] Django 3.0 & Python 3.7
+* [x] Custom user model
+* [x] Email/password for user registration and log in
+* [x] Static files properly configured
+* [x] [django-allauth](https://github.com/pennersr/django-allauth) for social authentication
+* [x] [Bootstrap](https://github.com/twbs/bootstrap) for styling
+* [x] [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
+
+
 
 ## First-time setup
 
@@ -64,7 +66,7 @@ It's also possible to change the `djangox_project` directory to your desired pro
 
 - Use [PostgreSQL locally via Docker](https://wsvincent.com/django-docker-postgresql/)
 - Use [django-environ](https://github.com/joke2k/django-environ) for environment variables
-- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/2.0/topics/email/#module-django.core.mail) to configure an SMTP backend
+- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/3.0/topics/email/#module-django.core.mail) to configure an SMTP backend
 - Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
 
 ## Adding Social Authentication
