@@ -2,7 +2,7 @@
 
 ## A Django starter project that "just works."
 
-> **NOTE**: This open source project is supported by my three published books: [Django for Beginners](https://djangoforbeginners.com/), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
+> **NOTE**: This open source project is supported by [LearnDjango.com](https://learndjango.com) which has free tutorials and premium courses.
 
 ## Features
 
@@ -13,7 +13,6 @@
 * [x] [django-allauth](https://github.com/pennersr/django-allauth) for social authentication
 * [x] [Bootstrap](https://github.com/twbs/bootstrap) for styling
 * [x] [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
-
 
 
 ## First-time setup
@@ -75,3 +74,6 @@ It's also possible to change the `djangox_project` directory to your desired pro
 - [Configuring Facebook](http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/#Create_and_configure_a_Facebook_app)
 - [Configuring Github](https://wsvincent.com/django-allauth-tutorial/)
 - `django-allauth` supports [many, many other providers in the official docs](https://django-allauth.readthedocs.io/en/latest/providers.html)
+
+## Contributing
+See [CONTRIBUTING.md](https://github.com/wsvincent/djangox/blob/master/CONTRIBUTING.md).
