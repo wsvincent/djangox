@@ -1,16 +1,10 @@
-<img width="400" src="logo.png" alt="DjangoX logo">
+<h1 align="center"><img align="center" width="300" src="logo.png" alt="DjangoX logo"></h1>
 
-## A Django starter project that "just works."
-
-> **NOTE**: This open source project is supported by [LearnDjango.com](https://learndjango.com) which has free tutorials and premium courses.
-
-## Demo
-
-![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
+> **NOTE**: This open source project is supported by [LearnDjango.com](https://learndjango.com).
 
 ## Features
 
-* [x] Django 3.0 & Python 3.7
+* [x] Django 3.0.x
 * [x] Custom user model
 * [x] Email/password for user registration and log in
 * [x] Static files properly configured, including Favicon
@@ -19,10 +13,16 @@
 * [x] [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
 * [x] [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
 
+## Demo
+
+![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
+
+
+
 
 ## First-time setup
 
-1.  Make sure Python 3.7x and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
+1.  Make sure Python 3.7+ and Pipenv are already installed. [See here for help](https://djangoforbeginners.com/initial-setup/).
 
 2.  Clone the repo and configure the virtual environment:
 
