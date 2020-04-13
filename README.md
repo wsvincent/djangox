@@ -2,28 +2,24 @@
 
 > A Django starter project that "just works." For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
 
-## Features
+## 🚀 Features
 
 - Django 3.0.x
 - Registration via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files properly configured
+- [Whitenoise](http://whitenoise.evans.io/en/stable/index.html) for serving static files
 - [Bootstrap v4](https://github.com/twbs/bootstrap)
 - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
 - [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
 
-## Install
+## 📖 Install
 
 ```
 $ git clone https://github.com/wsvincent/djangox.git
 $ cd djangox
 $ pipenv install
 $ pipenv shell
-(djangox) $
-```
 
-## Usage
-
-```
 # Run Migrations
 (djangox) $ python manage.py migrate
 
@@ -36,9 +32,17 @@ $ pipenv shell
 # Load the site at http://127.0.0.1:8000
 ```
 
-## Demo
+## 🎥 Demo
 
 ![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
+
+## 🤝 Contributing
+
+Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](https://github.com/wsvincent/djangox/blob/master/CONTRIBUTING.md).
+
+## ⭐️ Show your support
+
+Give a ⭐️ if this project helped you!
 
 <!-- ## Docker Usage
 ```
@@ -80,11 +84,3 @@ $ docker-compose run --rm web pip-compile requirements/requirements.in
 - [Configuring Facebook](http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/#Create_and_configure_a_Facebook_app)
 - [Configuring Github](https://wsvincent.com/django-allauth-tutorial/)
 - `django-allauth` supports [many, many other providers in the official docs](https://django-allauth.readthedocs.io/en/latest/providers.html) -->
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](https://github.com/wsvincent/djangox/blob/master/CONTRIBUTING.md).
-
-## Show your support
-
-Give a ⭐️ if this project helped you!
