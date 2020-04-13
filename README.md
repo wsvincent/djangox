@@ -6,10 +6,9 @@
 
 - Django 3.0.x
 - [Pipenv](https://pipenv.pypa.io/en/latest/) for dependencies and virtualenvs
-- Registration via [django-allauth](https://github.com/pennersr/django-allauth)
-- Static files properly configured
-- [Whitenoise](http://whitenoise.evans.io/en/stable/index.html) for serving static files
-- [Bootstrap v4](https://github.com/twbs/bootstrap)
+- [django-allauth](https://github.com/pennersr/django-allauth) for user registration
+- [Whitenoise](http://whitenoise.evans.io/en/stable/index.html) for static file
+- [Bootstrap v4](https://github.com/twbs/bootstrap) for styling
 - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
 - [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
 
