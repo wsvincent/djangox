@@ -10,6 +10,7 @@ django = "==3.0.3"
 django-allauth = "==0.41.0"
 django-crispy-forms = "==1.8.1"
 django-debug-toolbar = "==2.2"
+whitenoise = "==5.0.1"
 
 [requires]
 python_version = "3.7"

@@ -1,17 +1,15 @@
 <h1 align="center"><img align="center" width="300" src="logo.png" alt="DjangoX logo"></h1>
 
-> **NOTE**: This open source project is supported by [LearnDjango.com](https://learndjango.com).
+> A Django starter project that "just works." For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
 
 ## Features
 
-* [x] Django 3.0.x
-* [x] [Bootstrap v4](https://github.com/twbs/bootstrap)
-* [x] Registration via [django-allauth](https://github.com/pennersr/django-allauth)
-* [x] Static files properly configured
-
-
-* [x] [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
-* [x] [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
+- Django 3.0.x
+- Registration via [django-allauth](https://github.com/pennersr/django-allauth)
+- Static files properly configured
+- [Bootstrap v4](https://github.com/twbs/bootstrap)
+- [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
+- [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
 
 ## Demo
 
