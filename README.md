@@ -5,6 +5,7 @@
 ## 🚀 Features
 
 - Django 3.0.x
+- [Pipenv](https://pipenv.pypa.io/en/latest/) for dependencies and virtualenvs
 - Registration via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files properly configured
 - [Whitenoise](http://whitenoise.evans.io/en/stable/index.html) for serving static files
