@@ -24,6 +24,7 @@ $ git clone https://github.com/wsvincent/djangox.git
 $ cd djangox
 $ pipenv install
 $ pipenv shell
+(djangox) $
 ```
 
 ## Usage
