@@ -31,9 +31,6 @@ $ pipenv shell
 
 ```
 # Run Migrations
-(djangox) $ python manage.py makemigrations users
-
-# Migrate the Database
 (djangox) $ python manage.py migrate
 
 # Create a Superuser:
@@ -52,9 +49,6 @@ $ docker-compose build
 
 # Run Migrations
 $ docker-compose run --rm web python manage.py migrate
-
-# Migrate the Database
-$ python manage.py migrate
 
 # Create a Superuser
 $ docker-compose run --rm web python manage.py createsuperuser
