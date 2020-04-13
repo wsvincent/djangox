@@ -32,9 +32,7 @@ $ pipenv shell
 # Load the site at http://127.0.0.1:8000
 ```
 
-## 🎥 Demo
-
-![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
+![Homepage](homepage.png)
 
 ## 🤝 Contributing
 
