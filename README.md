@@ -11,10 +11,6 @@
 - [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) for debugging
 - [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms) for DRY forms
 
-## Demo
-
-![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
-
 ## Install
 
 ```
@@ -39,6 +35,10 @@ $ pipenv shell
 
 # Load the site at http://127.0.0.1:8000
 ```
+
+## Demo
+
+![Demo Video](https://github.com/wsvincent/djangox/blob/master/demo.gif)
 
 <!-- ## Docker Usage
 ```
@@ -66,7 +66,6 @@ $ docker-compose run --rm web pytest
 # Re-build PIP requirements
 $ docker-compose run --rm web pip-compile requirements/requirements.in
 ```-->
-
 
 <!-- ## Next Steps
 
