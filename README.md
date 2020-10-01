@@ -1,5 +1,3 @@
-<h1 align="center"><img align="center" width="300" src="logo.png" alt="DjangoX logo"></h1>
-
 > A batteries-included Django starter project. For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
 
 ## 🚀 Features
