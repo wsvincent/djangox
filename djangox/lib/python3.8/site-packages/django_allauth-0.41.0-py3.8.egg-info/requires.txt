@@ -1,0 +1,4 @@
+Django>=2.0
+python3-openid>=3.0.8
+requests-oauthlib>=0.3.0
+requests
