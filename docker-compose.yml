@@ -1,10 +1,13 @@
-version: '3.8'
+version: '3.7'
 
 services:
   web:
+    # Build Dockerfile found in this dir.
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
-    volumes:
-      - .:/code
     ports:
+      # Ports allows capture of host port requests
       - 8000:8000
+    volumes:
+      # Maps host current dir to container /code dir.  Changes are live!
+      - .:/code
+    command: ./manage.py runserver 0.0.0.0:8000
