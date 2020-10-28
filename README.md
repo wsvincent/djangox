@@ -36,6 +36,7 @@ $ cd djangox
 ### Pip
 
 ```
+$ python3 -m venv djangox
 $ source djangox/bin/activate
 (djangox) $ pip install -r requirements.txt
 (djangox) $ python manage.py migrate
@@ -98,7 +99,7 @@ Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](ht
 
 ## ⭐️ Support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️  if this project helped you!
 
 ## License
 
