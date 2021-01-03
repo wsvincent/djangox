@@ -19,7 +19,7 @@ services:
 
       - EMAIL_HOST=smtp.sendgrid.net
       - EMAIL_HOST_USER=apikey
-      - EMAIL_HOST_PASSWORD=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
+      - EMAIL_HOST_PASSWORD=sendgridkeys
       - EMAIL_PORT=587
       - EMAIL_USE_TLS=True
       
