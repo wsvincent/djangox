@@ -3,7 +3,26 @@ version: '3.8'
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    # command: python /code/manage.py runserver 0.0.0.0:8000
+    command: gunicorn config.wsgi -b 0.0.0.0:8000
+    
+    environment: 
+      - "DJANGO_SECRET_KEY=43)%4yx)aa@a=+_c(fn&kf3g29xax+=+a&key9i=!98zyim=8j"
+      - "DJANGO_DEBUG=True"
+      - "DJANGO_SECURE_SSL_REDIRECT=False"
+      - "DJANGO_SECURE_HSTS_SECONDS=0"
+      - "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=False"
+      - "DJANGO_SECURE_HSTS_PRELOAD=False"
+      - "DJANGO_SESSION_COOKIE_SECURE=False"
+      - "DJANGO_CSRF_COOKIE_SECURE=False"
+      - "DJANGO_SECURE_BROWSER_XSS_FILTER=True"
+
+      - EMAIL_HOST=smtp.sendgrid.net
+      - EMAIL_HOST_USER=apikey
+      - EMAIL_HOST_PASSWORD=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
+      - EMAIL_PORT=587
+      - EMAIL_USE_TLS=True
+      
     volumes:
       - .:/code
     ports:
@@ -12,7 +31,7 @@ services:
     image: postgres:11
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
+    environment: 
       - "POSTGRES_HOST_AUTH_METHOD=trust"
 
 volumes:
