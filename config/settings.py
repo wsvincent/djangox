@@ -2,8 +2,13 @@ import socket
 import dj_database_url
 import os
 
-from pathlib import path
+from pathlib import Path
 from environs import Env
+
+env = Env()
+env.read_env()
+
+
 
 # GENERAL
 # ------------------------------------------------------------------------------
