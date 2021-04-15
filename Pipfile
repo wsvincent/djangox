@@ -4,13 +4,22 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+autopep8 = "*"
 
 [packages]
 django = "~=3.1.0"
-django-allauth = "==0.43.0"
-django-crispy-forms = "~=1.10.0"
-django-debug-toolbar = "==3.2"
+django-allauth = "==0.41.0"
+django-crispy-forms = "==1.9.2"
+django-debug-toolbar = "==3.1"
 whitenoise = "==5.2.0"
+psycopg2-binary = "*"
+gunicorn = "20.0.4"
+dj-database-url = "*"
+bootstrap4 = "*"
+dj-rest-auth = "==1.1.0"
+environs = {version = "==8.0.0", extras = ["django"]}
+django-ckeditor = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"
