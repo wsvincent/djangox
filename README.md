@@ -89,6 +89,11 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 (djangox) $ python manage.py runserver
 
 # Load the site at http://127.0.0.1:8000
+
+# For running unit tests, first you will need to run
+(djangox) $ python manage.py collectstatic
+# And then
+(djangox) $ python manage.py test
 ```
 
 ----
