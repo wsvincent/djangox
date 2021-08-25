@@ -1,0 +1,24 @@
+I have added some Security in this project 
+hidden a security key in .env file, you can add you should create .env file 
+
+python-decouple is added in requirements.txt   
+
+step 1) pip install -r requirements.txt
+
+step 2] in settings.py:
+        from decouple import config
+
+        SECRET_KEY = config('SECRET_KEY')
+        DEBUG = config('DEBUG', cast = bool, default = False)
+
+
+step 3] in .env file(text file):
+        SECRET_KEY=  Your SECRET_KEY
+        DEBUG=       True or False 
+
+
+IMPORTANT: 
+        Make shure you git ignore .env and virtual envirnment Directory 
+
+
+also added a Footer
