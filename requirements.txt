@@ -1,5 +1,5 @@
-Django==3.1.4
-django-allauth==0.43.0
-django-crispy-forms==1.10.0
-django-debug-toolbar==3.2
-whitenoise==5.2.0
+Django==4.0.3
+django-allauth==0.50.0
+django-crispy-forms==1.14.0
+django-debug-toolbar==3.2.4
+whitenoise==6.0.0
