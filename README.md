@@ -66,7 +66,7 @@ $ docker-compose exec web python manage.py createsuperuser
 # Load the site at http://127.0.0.1:8000
 ```
 
-For Docker, the `INTERNAL_IPS` configuration in `config/settings.py` must be updated to the following:
+For Docker, the `INTERNAL_IPS` configuration in `django_project/settings.py` must be updated to the following:
 
 ```python
 # config/settings.py
