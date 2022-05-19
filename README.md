@@ -2,7 +2,7 @@
 
 ## 🚀 Features
 
-- Django 4.0 & Python 3.8
+- Django 4.0 & Python 3.10
 - Install via [Pip](https://pypi.org/project/pip/), [Pipenv](https://pypi.org/project/pipenv/), or [Docker](https://www.docker.com/)
 - User log in/out, sign up, password reset via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
@@ -36,12 +36,12 @@ $ cd djangox
 ### Pip
 
 ```
-$ python3 -m venv djangox
+$ python3 -m venv .venv
 $ source djangox/bin/activate
-(djangox) $ pip install -r requirements.txt
-(djangox) $ python manage.py migrate
-(djangox) $ python manage.py createsuperuser
-(djangox) $ python manage.py runserver
+(.venv) $ pip install -r requirements.txt
+(.venv) $ python manage.py migrate
+(.venv) $ python manage.py createsuperuser
+(.venv) $ python manage.py runserver
 # Load the site at http://127.0.0.1:8000
 ```
 
@@ -59,8 +59,7 @@ $ pipenv shell
 ### Docker
 
 ```
-$ docker build .
-$ docker-compose up -d
+$ docker-compose up -d --build
 $ docker-compose exec web python manage.py migrate
 $ docker-compose exec web python manage.py createsuperuser
 # Load the site at http://127.0.0.1:8000
@@ -80,13 +79,13 @@ INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 
 ```
 # Run Migrations
-(djangox) $ python manage.py migrate
+(.venv) $ python manage.py migrate
 
 # Create a Superuser
-(djangox) $ python manage.py createsuperuser
+(.venv) $ python manage.py createsuperuser
 
 # Confirm everything is working:
-(djangox) $ python manage.py runserver
+(.venv) $ python manage.py runserver
 
 # Load the site at http://127.0.0.1:8000
 ```
