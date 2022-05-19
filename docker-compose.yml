@@ -1,4 +1,4 @@
-version: '3.8'
+version: '3.9'
 
 services:
   web:
@@ -8,8 +8,10 @@ services:
       - .:/code
     ports:
       - 8000:8000
+    depends_on:
+      - db
   db:
-    image: postgres:11
+    image: postgres:13
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
