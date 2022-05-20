@@ -1,4 +1,4 @@
-> A batteries-included Django starter project. For a production-ready version see the book [Django for Professionals](https://djangoforprofessionals.com).
+> A batteries-included Django starter project. To learn more try the books [Django for Beginners](https://djangoforbeginners.com), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
 ## 🚀 Features
 
@@ -18,7 +18,7 @@
   * [Pip](#pip)
   * [Pipenv](#pipenv)
   * [Docker](#docker)
-* [Setup](#setup)
+* [Next Steps](#next-steps)
 * [Contributing](#contributing)
 * [Support](#support)
 * [License](#license)
@@ -26,7 +26,7 @@
 ----
 
 ## 📖 Installation
-DjangoX can be installed via Pip, Pipenv, or Docker depending upon your setup. To start, clone the repo to your local computer and change into the proper directory.
+DjangoX can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
 
 ```
 $ git clone https://github.com/wsvincent/djangox.git
@@ -36,8 +36,15 @@ $ cd djangox
 ### Pip
 
 ```
-$ python3 -m venv .venv
+$ python -m venv .venv
+
+# Windows
+$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+$ .venv\Scripts\Activate.ps1
+
+# macOS
 $ source djangox/bin/activate
+
 (.venv) $ pip install -r requirements.txt
 (.venv) $ python manage.py migrate
 (.venv) $ python manage.py createsuperuser
@@ -58,14 +65,23 @@ $ pipenv shell
 
 ### Docker
 
-```
-$ docker-compose up -d --build
-$ docker-compose exec web python manage.py migrate
-$ docker-compose exec web python manage.py createsuperuser
-# Load the site at http://127.0.0.1:8000
+To use Docker with PostgreSQL as the database update the `DATABASES` section of `django_project/settings.py` to reflect the following:
+
+```python
+# django_project/settings.py
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db",  # set in docker-compose.yml
+        "PORT": 5432,  # default postgres port
+    }
+}
 ```
 
-For Docker, the `INTERNAL_IPS` configuration in `django_project/settings.py` must be updated to the following:
+The `INTERNAL_IPS` configuration in `django_project/settings.py` must be also be updated:
 
 ```python
 # config/settings.py
@@ -75,20 +91,24 @@ hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
 INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
 ```
 
-## Setup
+And then proceed to build the Docker image, run the container, and execute the standard commands within Docker.
 
 ```
-# Run Migrations
-(.venv) $ python manage.py migrate
-
-# Create a Superuser
-(.venv) $ python manage.py createsuperuser
-
-# Confirm everything is working:
-(.venv) $ python manage.py runserver
-
+$ docker-compose up -d --build
+$ docker-compose exec web python manage.py migrate
+$ docker-compose exec web python manage.py createsuperuser
 # Load the site at http://127.0.0.1:8000
 ```
+
+## Next Steps
+
+- Add environment variables. There are multiple packages but I personally prefer [environs](https://pypi.org/project/environs/).
+- Add [gunicorn](https://pypi.org/project/gunicorn/) as the production web server.
+- Update the [EMAIL_BACKEND](https://docs.djangoproject.com/en/4.0/topics/email/#module-django.core.mail) and connect with a mail provider.
+- Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure).
+- `django-allauth` supports [social authentication](https://django-allauth.readthedocs.io/en/latest/providers.html) if you need that.
+
+I cover all of these steps in my three books: [Django for Beginners](https://djangoforbeginners.com), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
 ----
 
@@ -103,45 +123,3 @@ Give a ⭐️  if this project helped you!
 ## License
 
 [The MIT License](LICENSE)
-
-
-<!-- ## Docker Usage
-```
-# Build the Docker Image
-$ docker-compose build
-
-# Run Migrations
-$ docker-compose run --rm web python manage.py migrate
-
-# Create a Superuser
-$ docker-compose run --rm web python manage.py createsuperuser
-
-# Run Django on http://localhost:8000/
-$ docker-compose up
-
-# Run Django in background mode
-$ docker-compose up -d
-
-# Stop all running containers
-$ docker-compose down
-
-# Run Tests
-$ docker-compose run --rm web pytest
-
-# Re-build PIP requirements
-$ docker-compose run --rm web pip-compile requirements/requirements.in
-```-->
-
-<!-- ## Next Steps
-
-- Use [PostgreSQL locally via Docker](https://wsvincent.com/django-docker-postgresql/)
-- Use [django-environ](https://github.com/joke2k/django-environ) for environment variables
-- Update [EMAIL_BACKEND](https://docs.djangoproject.com/en/3.0/topics/email/#module-django.core.mail) to configure an SMTP backend
-- Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure)
-
-## Adding Social Authentication
-
-- [Configuring Google](https://wsvincent.com/django-allauth-tutorial-custom-user-model/#google-credentials)
-- [Configuring Facebook](http://www.sarahhagstrom.com/2013/09/the-missing-django-allauth-tutorial/#Create_and_configure_a_Facebook_app)
-- [Configuring Github](https://wsvincent.com/django-allauth-tutorial/)
-- `django-allauth` supports [many, many other providers in the official docs](https://django-allauth.readthedocs.io/en/latest/providers.html) -->
