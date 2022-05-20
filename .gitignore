@@ -11,8 +11,4 @@ __pycache__/
 db.sqlite3
 media
 
-<<<<<<< HEAD
-.venv/
-=======
 .venv
->>>>>>> 3e9da91d6fe3405e4f3b9745e90d2113ee7dd4fd
