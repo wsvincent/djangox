@@ -1,6 +1,7 @@
-Django==4.0.4
-django-allauth==0.50.0
+crispy-bootstrap5==0.6
+Django==4.1.1
+django-allauth==0.51.0
 django-crispy-forms==1.14.0
 django-debug-toolbar==3.2.4
-whitenoise==6.0.0
+whitenoise==6.2.0
 psycopg2-binary==2.9.3
