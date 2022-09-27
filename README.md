@@ -43,7 +43,7 @@ $ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 $ .venv\Scripts\Activate.ps1
 
 # macOS
-$ source djangox/bin/activate
+$ source .venv/bin/activate
 
 (.venv) $ pip install -r requirements.txt
 (.venv) $ python manage.py migrate
