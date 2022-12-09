@@ -18,8 +18,8 @@ jobs:
       mysql:
         image: mysql:5.7
         env:
-          MYSQL_ROOT_PASSWORD: djangox
-          MYSQL_DATABASE: djangox
+          MYSQL_ROOT_PASSWORD: django-boot
+          MYSQL_DATABASE: django-boot
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=10s --health-retries=5
     steps:
     - uses: actions/checkout@v3
@@ -35,9 +35,9 @@ jobs:
       run: |
         echo "allowed_hosts=127.0.0.1,localhost" >> .env
         echo "django_session=django-insecure" >> .env
-        echo "db_name=djangox" >> .env
+        echo "db_name=django-boot" >> .env
         echo "db_user=root" >> .env
-        echo "db_pass=djangox" >> .env
+        echo "db_pass=django-boot" >> .env
         echo "db_host=127.0.0.1" >> .env
         echo "db_port=3306" >> .env
         echo "debug=false" >> .env

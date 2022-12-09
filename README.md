@@ -27,11 +27,11 @@
 ----
 
 ## 📖 Installation
-DjangoX can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
+DjangoBoot can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
 
 ```
-$ git clone https://github.com/wsvincent/djangox.git
-$ cd djangox
+$ git clone https://github.com/pythonbrad/django-boot.git
+$ cd django-boot
 ```
 
 ### Pip
@@ -98,7 +98,7 @@ I cover all of these steps in my three books: [Django for Beginners](https://dja
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](https://github.com/wsvincent/djangox/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome! See [CONTRIBUTING.md](https://github.com/pythonbrad/django-boot/blob/master/CONTRIBUTING.md).
 
 ## ⭐️ Support
 
