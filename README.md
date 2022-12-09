@@ -6,10 +6,10 @@
 - Install via [Pip](https://pypi.org/project/pip/), [Pipenv](https://pypi.org/project/pipenv/), or [Docker](https://www.docker.com/)
 - User log in/out, sign up, password reset via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
-- Styling with [Bootstrap v5](https://getbootstrap.com/)
+- Styling with [Bulma CSS](https://bulma.io/)
 - Debugging with [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 - DRY forms with [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
-
+- Maintenance Mode [django-maintenance-mode](https://pypi.org/project/django-maintenance-mode/)
 ![Homepage](homepage_41.png)
 ----
 
@@ -17,6 +17,7 @@
 * **[Installation](#installation)**
   * [Pip](#pip)
   * [Pipenv](#pipenv)
+  * [Maintenance mode](#maintenance-mode)
   * [Docker](#docker)
 * [Next Steps](#next-steps)
 * [Contributing](#contributing)
@@ -63,35 +64,19 @@ $ pipenv shell
 # Load the site at http://127.0.0.1:8000
 ```
 
+### Environ
+
+Duplicate the .env_example file in .env and configure your Django application.
+
+### Maintenance mode
+
+```
+python ./manage.py maintenance_mode <on|off>
+```
+
 ### Docker
 
-To use Docker with PostgreSQL as the database update the `DATABASES` section of `django_project/settings.py` to reflect the following:
-
-```python
-# django_project/settings.py
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "postgres",
-        "USER": "postgres",
-        "PASSWORD": "postgres",
-        "HOST": "db",  # set in docker-compose.yml
-        "PORT": 5432,  # default postgres port
-    }
-}
-```
-
-The `INTERNAL_IPS` configuration in `django_project/settings.py` must be also be updated:
-
-```python
-# config/settings.py
-# django-debug-toolbar
-import socket
-hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
-```
-
-And then proceed to build the Docker image, run the container, and execute the standard commands within Docker.
+To build the Docker image, run the container, and execute the standard commands within Docker.
 
 ```
 $ docker-compose up -d --build
@@ -102,7 +87,6 @@ $ docker-compose exec web python manage.py createsuperuser
 
 ## Next Steps
 
-- Add environment variables. There are multiple packages but I personally prefer [environs](https://pypi.org/project/environs/).
 - Add [gunicorn](https://pypi.org/project/gunicorn/) as the production web server.
 - Update the [EMAIL_BACKEND](https://docs.djangoproject.com/en/4.0/topics/email/#module-django.core.mail) and connect with a mail provider.
 - Make the [admin more secure](https://opensource.com/article/18/1/10-tips-making-django-admin-more-secure).
