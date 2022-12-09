@@ -40,6 +40,11 @@ jobs:
         echo "db_pass=djangox" >> .env
         echo "db_host=127.0.0.1" >> .env
         echo "db_port=3306" >> .env
+        echo "debug=false" >> .env
+        echo "allowed_hosts=" >> .env
+        echo "internal_ips=" >> .env
+        echo "maintenance_mode=false" >> .env
+        echo "maintenance_mode_ignore_urls=" >> .env
     - name: Check the configuration
       run: |
         python manage.py check
