@@ -1,4 +1,4 @@
-crispy-bootstrap5==0.6
+crispy-bulma==0.8.0
 Django==4.1.4
 django-allauth==0.51.0
 django-crispy-forms==1.14.0

@@ -4,11 +4,13 @@
 {% block title %}Log in{% endblock %}
 
 {% block content %}
-<h2>Log in</h2>
+<h2 class="title">Log in</h2>
 <form method="post">
   {% csrf_token %}
   {{ form|crispy }}
-  <button class="btn btn-success" type="submit">Log in</button>
+  <div class="control">
+    <button class="button is-primary" type="submit">Log in</button>
+  </div>
 </form>
 <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
 {% endblock content %}

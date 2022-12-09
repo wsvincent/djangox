@@ -33,7 +33,7 @@ INSTALLED_APPS = [
     "allauth",
     "allauth.account",
     "crispy_forms",
-    "crispy_bootstrap5",
+    "crispy_bulma",
     "debug_toolbar",
     "maintenance_mode",
     # Local
@@ -138,7 +138,9 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # django-crispy-forms
 # https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
-CRISPY_TEMPLATE_PACK = "bootstrap4"
+CRISPY_ALLOWED_TEMPLATE_PACKS = ("bulma",)
+CRISPY_TEMPLATE_PACK = "bulma"
+
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-backend
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
