@@ -3,7 +3,6 @@ version: '3.9'
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
@@ -11,11 +10,12 @@ services:
     depends_on:
       - db
   db:
-    image: postgres:13
-    volumes:
-      - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      image: mysql:5.7
+      volumes:
+        - mysql-data:/var/lib/mysql
+      environment:
+        MYSQL_ROOT_PASSWORD: mysql
+        MYSQL_DATABASE: mysql
 
 volumes:
-  postgres_data:
+  mysql-data:

@@ -1,9 +1,6 @@
 # Pull base image
 FROM python:3.10-slim-buster
 
-# Set Python environment variable
-FROM python:${PYTHON_VERSION}
-
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -18,6 +15,7 @@ COPY requirements.txt /tmp/requirements.txt
 RUN set -ex && \
     pip install --upgrade pip && \
     pip install -r /tmp/requirements.txt && \
+    pip install gunicorn && \
     rm -rf /root/.cache/
 
 # Copy local project
