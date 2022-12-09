@@ -67,18 +67,20 @@
         </div>
       </div>
     </nav>
-    <section class="section container is-fullheight-with-navbar">
-      {% if messages %}
-        {% for message in messages %}
-        <div class="notification is-{% if message.level == 20 %}info{% elif message.level == 25 %}success{% elif message.level == 30 %}warning{% else %}danger{% endif %}">{{message}}</div>
-        {% endfor %}
-      {% endif %}
-      {% block content %}
-      <p>Default content</p>
-      {% endblock content %}
+    <section class="hero is-fullheight-with-navbar">
+      <div class="container">
+        {% if messages %}
+          {% for message in messages %}
+          <div class="notification is-{% if message.level == 20 %}info{% elif message.level == 25 %}success{% elif message.level == 30 %}warning{% else %}danger{% endif %}">{{message}}</div>
+          {% endfor %}
+        {% endif %}
+        {% block content %}
+        <p>Default content</p>
+        {% endblock content %}
+      </div>
     </section>
-    <footer class="navbar">
-      <p class="navbar-item">Footer...</p>
+    <footer class="footer">
+      <p class="content">Footer...</p>
     </footer>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
