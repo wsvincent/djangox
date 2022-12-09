@@ -1,15 +1,15 @@
-{% extends '_base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-{% block title %}Home page{% endblock title %}
+{% block title %}Home page{% endblock %}
 
 {% block content %}
 <div class="has-text-centered">
-  <figure class="image is-inline-block is-fullwidth">
+  <figure class="image is-inline-block">
     <img src="{% static 'images/logo.png' %}">
   </figure>
   <p class="subtitle is-3">
     A Django starter project with batteries.
   </p>
 </div>
-{% endblock content %}
+{% endblock %}

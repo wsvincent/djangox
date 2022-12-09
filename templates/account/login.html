@@ -1,4 +1,4 @@
-{% extends '_base.html' %}
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
 
 {% block title %}Log in{% endblock %}
@@ -13,4 +13,4 @@
   </div>
 </form>
 <a href="{% url 'account_reset_password' %}">Forgot Password?</a>
-{% endblock content %}
+{% endblock %}

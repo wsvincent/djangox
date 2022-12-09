@@ -1,0 +1,14 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block body %}
+  <section class="section is-fullheight is-fullwidth">
+    <div class="has-text-centered">
+      <figure class="is-inline-block box image" style="width: 50%">
+        <img src="{% static 'images/logo.png' %}">
+      </figure>
+      <div class="content">
+        <p class="title">{% block message %}{% endblock %}</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

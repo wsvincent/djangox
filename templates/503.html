@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}Maintenance Mode{% endblock %}</title>
-</head>
-<body>
-  <h1>Server unavailable</h1>
-  <p>Sorry we are in maintenance</p>
-</body>
-</html>
+{% extends '5xx.html' %}
+{% block title %}Maintenance Mode{% endblock %}
+{% block message %}Sorry we are in maintenance{% endblock %}
