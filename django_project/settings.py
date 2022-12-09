@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "debug_toolbar",
+    "maintenance_mode",
     # Local
     "accounts",
     "pages",
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "maintenance_mode.middleware.MaintenanceModeMiddleware",
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
@@ -71,6 +73,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "maintenance_mode.context_processors.maintenance_mode"
             ],
         },
     },
@@ -170,3 +173,8 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
+
+# maintenance mode config
+# https://github.com/bashu/django-maintenancemode
+MAINTENANCE_MODE = env.bool('maintenance_mode')
+MAINTENANCE_MODE_IGNORE_URLS = env.list("maintenance_mode_ignore_urls")
