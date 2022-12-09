@@ -12,4 +12,5 @@ db.sqlite3
 media
 
 .venv
+.env
 staticfiles
