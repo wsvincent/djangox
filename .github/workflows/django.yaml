@@ -21,6 +21,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: django-boot
           MYSQL_DATABASE: django-boot
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=10s --health-retries=5
+        ports: ['3306:3306']
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
@@ -45,9 +46,10 @@ jobs:
         echo "internal_ips=" >> .env
         echo "maintenance_mode=false" >> .env
         echo "maintenance_mode_ignore_urls=" >> .env
-    - name: Check the configuration
+    - name: Run migrations
       run: |
-        python manage.py check
+        python manage.py makemigrations
+        python manage.py migrate
     - name: Run Tests
       run: |
         python manage.py test --failfast
