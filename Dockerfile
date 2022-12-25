@@ -2,7 +2,7 @@
 FROM python:3.10-slim-buster
 
 # Set Python environment variable
-FROM python:${PYTHON_VERSION}
+FROM python:3.10-slim-buster
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
