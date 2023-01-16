@@ -1,9 +1,6 @@
 # Pull base image
 FROM python:3.10-slim-buster
 
-# Set Python environment variable
-FROM python:${PYTHON_VERSION}
-
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
