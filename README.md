@@ -2,7 +2,7 @@
 
 ## 🚀 Features
 
-- Django 4.1 & Python 3.10
+- Django 4.1 & Python 3.11
 - Install via [Pip](https://pypi.org/project/pip/), [Pipenv](https://pypi.org/project/pipenv/), or [Docker](https://www.docker.com/)
 - User log in/out, sign up, password reset via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
@@ -26,8 +26,9 @@
 
 ----
 
-## 📖 Installation
+## Installation
 DjangoBoot can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
+*NB:* We provide the [raw version](requirements_raw.txt) of the requirements.txt file.
 
 ```
 $ git clone https://github.com/pythonbrad/django-boot.git

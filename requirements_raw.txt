@@ -1,0 +1,11 @@
+crispy-bulma
+Django
+django-allauth
+django-crispy-forms
+django-debug-toolbar
+django-environ
+django-maintenance-mode
+mysqlclient
+Pillow
+whitenoise
+gunicorn
