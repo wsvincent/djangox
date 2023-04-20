@@ -2,21 +2,20 @@
 
 ## 🚀 Features
 
-- Django 4.1 & Python 3.11
-- Install via [Pip](https://pypi.org/project/pip/), [Pipenv](https://pypi.org/project/pipenv/), or [Docker](https://www.docker.com/)
+- Django 4.2 & Python 3.11
+- Install via [Pip](https://pypi.org/project/pip/) or [Docker](https://www.docker.com/)
 - User log in/out, sign up, password reset via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
 - Styling with [Bootstrap v5](https://getbootstrap.com/)
 - Debugging with [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 - DRY forms with [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
 
-![Homepage](homepage_41.png)
+![Homepage](homepage_42.png)
 ----
 
 ## Table of Contents
 * **[Installation](#installation)**
   * [Pip](#pip)
-  * [Pipenv](#pipenv)
   * [Docker](#docker)
 * [Next Steps](#next-steps)
 * [Contributing](#contributing)
@@ -26,7 +25,7 @@
 ----
 
 ## 📖 Installation
-DjangoX can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
+DjangoX can be installed via Pip or Docker. To start, clone the repo to your local computer and change into the proper directory.
 
 ```
 $ git clone https://github.com/wsvincent/djangox.git
@@ -46,17 +45,6 @@ $ .venv\Scripts\Activate.ps1
 $ source .venv/bin/activate
 
 (.venv) $ pip install -r requirements.txt
-(.venv) $ python manage.py migrate
-(.venv) $ python manage.py createsuperuser
-(.venv) $ python manage.py runserver
-# Load the site at http://127.0.0.1:8000
-```
-
-### Pipenv
-
-```
-$ pipenv install
-$ pipenv shell
 (.venv) $ python manage.py migrate
 (.venv) $ python manage.py createsuperuser
 (.venv) $ python manage.py runserver
