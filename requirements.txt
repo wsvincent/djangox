@@ -8,7 +8,7 @@ defusedxml==0.7.1
 Django==4.2
 django-allauth==0.52.0
 django-crispy-forms==2.0
-django_debug_toolbar==3.8.1
+django_debug_toolbar==4.0.0
 gunicorn==20.1.0
 idna==3.4
 oauthlib==3.2.2
