@@ -1,5 +1,7 @@
 > A batteries-included Django starter project. To learn more try the books [Django for Beginners](https://djangoforbeginners.com), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
+<img src="https://learndjango.com/static/images/djangox_demo.gif" width="750px">
+
 ## 🚀 Features
 
 - Django 4.2 & Python 3.11
@@ -10,7 +12,6 @@
 - Debugging with [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 - DRY forms with [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
 
-![Screencast demo](https://learndjango.com/static/images/djangox_demo.gif)
 ----
 
 ## Table of Contents
