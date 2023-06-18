@@ -1,8 +1,12 @@
 > A batteries-included Django starter project. To learn more try the books [Django for Beginners](https://djangoforbeginners.com), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
+
+![Homepage](homepage_41.png)
+
+
 ## 🚀 Features
 
-- Django 4.1 & Python 3.11
+- Django 4.2 & Python 3.11
 - Install via [Pip](https://pypi.org/project/pip/), [Pipenv](https://pypi.org/project/pipenv/), or [Docker](https://www.docker.com/)
 - User log in/out, sign up, password reset via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
@@ -10,8 +14,7 @@
 - Debugging with [django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar)
 - DRY forms with [django-crispy-forms](https://github.com/django-crispy-forms/django-crispy-forms)
 - Maintenance Mode [django-maintenance-mode](https://pypi.org/project/django-maintenance-mode/)
-![Homepage](homepage_41.png)
-----
+- Custom 404, 500, and 403 error pages
 
 ## Table of Contents
 * **[Installation](#installation)**
@@ -26,7 +29,7 @@
 
 ----
 
-## Installation
+## 📖 Installation
 DjangoBoot can be installed via Pip, Pipenv, or Docker. To start, clone the repo to your local computer and change into the proper directory.
 *NB:* We provide the [raw version](requirements_raw.txt) of the requirements.txt file.
 
