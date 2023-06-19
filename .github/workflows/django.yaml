@@ -16,7 +16,7 @@ jobs:
         python-version: ["3.11"]
     services:
       mysql:
-        image: mysql:5.7
+        image: mysql:8
         env:
           MYSQL_ROOT_PASSWORD: django-boot
           MYSQL_DATABASE: django-boot
