@@ -36,14 +36,15 @@ INSTALLED_APPS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # WhiteNoise
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "debug_toolbar.middleware.DebugToolbarMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",  # Django Debug Toolbar
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "allauth.account.middleware.AccountMiddleware",  # django-allauth
 ]
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#root-urlconf
@@ -130,9 +131,15 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = [BASE_DIR / "static"]
 
-# http://whitenoise.evans.io/en/stable/django.html#add-compression-and-caching-support
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
+# https://whitenoise.readthedocs.io/en/latest/django.html
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
 
 # django-crispy-forms
 # https://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
