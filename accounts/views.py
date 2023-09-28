@@ -13,9 +13,14 @@ class UserProfileView(View):
     def post(self, request, *args, **kwargs):
         form = UserProfileForm(data=request.POST, instance=request.user)
         if form.is_valid():
-            form.save()
-            messages.success(request, "Your profile is update!")
-            return HttpResponseRedirect(request.META["HTTP_REFERER"])
+            try:
+                form.save()
+                messages.success(request, "Your profile is update!")
+
+            except Exception as e:
+                messages.error(request, f"An error occured: {str(e)}")
+
         else:
             messages.error(request, "Please try again!")
-            return HttpResponseRedirect(request.META["HTTP_REFERER"])
+
+        return HttpResponseRedirect(request.META["HTTP_REFERER"])
