@@ -1,3 +1,11 @@
+### djangx + plus
+
+- htmx, hyperscript
+- starter app that has all my favorite patterns
+
+**very much a work in progress**
+
+---
 > A batteries-included Django starter project. To learn more try the books [Django for Beginners](https://djangoforbeginners.com), [Django for APIs](https://djangoforapis.com), and [Django for Professionals](https://djangoforprofessionals.com).
 
 
