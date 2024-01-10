@@ -3,11 +3,21 @@ version: '3.9'
 services:
   web:
     build: .
-    command: python /code/manage.py runserver 0.0.0.0:8000
+    command: >
+      sh -c "python /code/manage.py migrate && 
+             python /code/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
       - 8000:8000
+    environment:
+      - USE_DOCKER=1
+      - SECRET_KEY=my_super_secret_key
+      - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=djangox
+      - DB_USER=djangox
+      - DB_PASS=djangox
     depends_on:
       - db
   db:
@@ -15,7 +25,11 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - "POSTGRES_HOST_AUTH_METHOD=trust"
+      - POSTGRES_DB=djangox
+      - POSTGRES_USER=djangox
+      - POSTGRES_PASSWORD=djangox
+    ports:
+      - 5432:5432
 
 volumes:
   postgres_data:
