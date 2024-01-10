@@ -86,6 +86,7 @@ TEMPLATES = [
     },
 ]
 
+# https://docs.djangoproject.com/en/dev/ref/settings/#databases
 if env.bool("USE_DOCKER"):
     DATABASES = {
         "default": {
@@ -98,7 +99,6 @@ if env.bool("USE_DOCKER"):
         }
     }
 else:
-# https://docs.djangoproject.com/en/dev/ref/settings/#databases
     DATABASES = {
         "default": {
             "ENGINE": "django.db.backends.sqlite3",
@@ -167,10 +167,13 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # django-debug-toolbar
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
 # https://docs.djangoproject.com/en/dev/ref/settings/#internal-ips
-INTERNAL_IPS = ["127.0.0.1"]
-# import socket
-# hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
-# INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+if env.bool("USE_DOCKER"):
+    import socket
+    hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+    INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+else:
+    INTERNAL_IPS = ["127.0.0.1"]
+
 
 # https://docs.djangoproject.com/en/dev/topics/auth/customizing/#substituting-a-custom-user-model
 AUTH_USER_MODEL = "accounts.CustomUser"
