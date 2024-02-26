@@ -1,5 +1,5 @@
 # Pull base image
-FROM python:2-slim-buster
+FROM python:3.12.2-slim-bookworm
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
