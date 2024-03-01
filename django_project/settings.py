@@ -19,7 +19,6 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
     "django.contrib.sites",
     # Third-party
@@ -32,6 +31,9 @@ INSTALLED_APPS = [
     "accounts",
     "pages",
 ]
+
+if DEBUG:
+    INSTALLED_APPS.insert(5, "whitenoise.runserver_nostatic")
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
