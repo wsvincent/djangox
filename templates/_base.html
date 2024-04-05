@@ -36,12 +36,15 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'about' %}">About</a>
           </li>
+        </ul>
           {% if user.is_authenticated %}
+          <div class="d-flex">
+            <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Settings
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu dropdown-menu-end">
               <li><a class="dropdown-item" href="#">{{ user.email }}</a></li>
               <li>
                 <hr class="dropdown-divider">
@@ -51,11 +54,14 @@
             </ul>
           </li>
         </ul>
+          </div>
         {% else %}
-        <form class="form d-flex me-auto">
+      <div class="d-flex mr-auto">
+        <form class="form d-flex ">
           <a href="{% url 'account_login' %}" class="btn btn-outline-secondary">Log in</a>
           <a href="{% url 'account_signup' %}" class="btn btn-primary ml-2">Sign up</a>
         </form>
+        </div>
         {% endif %}
       </div>
     </div>
