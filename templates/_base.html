@@ -38,8 +38,8 @@
           </li>
         </ul>
           {% if user.is_authenticated %}
-          <div class="d-flex">
-            <ul class="navbar-nav mr-auto">
+          <div class="mr-auto ">
+            <ul class="navbar-nav">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Settings
@@ -56,7 +56,7 @@
         </ul>
           </div>
         {% else %}
-      <div class="d-flex mr-auto">
+      <div class="mr-auto">
         <form class="form d-flex ">
           <a href="{% url 'account_login' %}" class="btn btn-outline-secondary">Log in</a>
           <a href="{% url 'account_signup' %}" class="btn btn-primary ml-2">Sign up</a>
