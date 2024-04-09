@@ -3,91 +3,91 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
-	<title>{% block title %}DjangoX{% endblock title %}</title>
-	<meta name="description" content="A framework for launching new Django projects quickly." />
-	<meta name="author" content="" />
-	<link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+  <title>{% block title %}DjangoX{% endblock title %}</title>
+  <meta name="description" content="A framework for launching new Django projects quickly." />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}" />
 
-	{% block css %}
-	<!-- Bootstrap CSS -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  {% block css %}
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-	<link rel="stylesheet" href="{% static 'css/base.css' %}" />
-	{% endblock %}
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  {% endblock %}
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg bg-body-tertiary">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="{% url 'home' %}">DjangoX</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'about' %}">About</a>
-					</li>
-				</ul>
-				{% if user.is_authenticated %}
-				<div class="mr-auto">
-					<ul class="navbar-nav">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								Settings
-							</a>
-							<ul class="dropdown-menu dropdown-menu-end">
-								<li><a class="dropdown-item" href="#">{{ user.email }}</a></li>
-								<li>
-									<hr class="dropdown-divider" />
-								</li>
-								<li><a class="dropdown-item" href="{% url 'account_change_password' %}">Change password</a></li>
-								<li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a></li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				{% else %}
-				<div class="mr-auto">
-					<form class="form d-flex">
-						<a href="{% url 'account_login' %}" class="btn btn-outline-secondary">Log in</a>
-						<a href="{% url 'account_signup' %}" class="btn btn-primary ml-2">Sign up</a>
-					</form>
-				</div>
-				{% endif %}
-			</div>
-		</div>
-	</nav>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="{% url 'home' %}">DjangoX</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About</a>
+          </li>
+        </ul>
+        {% if user.is_authenticated %}
+        <div class="mr-auto">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Settings
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">{{ user.email }}</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li><a class="dropdown-item" href="{% url 'account_change_password' %}">Change password</a></li>
+                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Sign out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        {% else %}
+        <div class="mr-auto">
+          <form class="form d-flex">
+            <a href="{% url 'account_login' %}" class="btn btn-outline-secondary">Log in</a>
+            <a href="{% url 'account_signup' %}" class="btn btn-primary ml-2">Sign up</a>
+          </form>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
 
-	<div class="container">
-		{% block content %}
-		<p>Default content...</p>
-		{% endblock content %}
-	</div>
+  <div class="container">
+    {% block content %}
+    <p>Default content...</p>
+    {% endblock content %}
+  </div>
 
-	<footer class="footer">
-		<div class="container">
-			<span class="text-muted">Footer...</span>
-		</div>
-	</footer>
+  <footer class="footer">
+    <div class="container">
+      <span class="text-muted">Footer...</span>
+    </div>
+  </footer>
 
-	{% block javascript %}
-	<!-- Bootstrap JavaScript -->
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  {% block javascript %}
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-	<!-- Project JS -->
-	<script src="{% static 'js/base.js' %}"></script>
+  <!-- Project JS -->
+  <script src="{% static 'js/base.js' %}"></script>
 
-	{% endblock javascript %}
+  {% endblock javascript %}
 </body>
 
 </html>
