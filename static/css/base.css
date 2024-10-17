@@ -11,16 +11,26 @@ html {
   }
 }
 
+.lead {
+  color: black;
+  font-weight: 200;
+}
+
+
+
+
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
 }
 
 .container {
   max-width: 960px;
+  margin-top: 30px;
 }
 
 .pricing-header {
-  max-width: 700px;
+  max-width: 1750px;
+  justify-content: left;
 }
 
 .footer {
