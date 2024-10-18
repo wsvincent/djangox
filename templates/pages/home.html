@@ -8,6 +8,10 @@
   <img src="{% static 'images/mini-logo.png' %}" class="img-fluid" width="35%" alt="APC logo"/>
 </div>
 <div>
-  <h2>Welcome, {{ user.username }}</h2>
+  {% if user.is_authenticated %}
+  <h2>Welcome, {{ user.username }}!</h2>
+  {% else %}
+  <h2>Welcome, User!</h2>
 </div>
+{% endif %}
 {% endblock content %}
