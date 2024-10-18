@@ -4,14 +4,49 @@
 {% block title %}Home page{% endblock title %}
 
 {% block content %}
-<div class="pricing-header px-10 py-3 pt-md-2 pb-md-4 mx-left text-center">
+<div class="pricing-header">
   <img src="{% static 'images/mini-logo.png' %}" class="img-fluid" width="35%" alt="APC logo"/>
-</div>
-<div>
   {% if user.is_authenticated %}
-  <h2>Welcome, {{ user.username }}!</h2>
-  {% else %}
-  <h2>Welcome, User!</h2>
+  <h2 class="greeting py-3">Welcome, {{ user.username }}!</h2>
 </div>
+<div class="options1">
+  <img src="{% static 'images/appeal.webp' %}" width="100%" alt="Appeal logo"/>
+  <button class="appeal" onclick="window.location.href='https://expert-disco-g9prq7qq5q9hw7g9-8000.app.github.dev/about/'">File Appeal</button>
+</div>
+<div class="options2">
+    <img src="{% static 'images/glass.webp' %}" width="100%" alt="Status logo"/>
+    <button class="appeal" onclick="window.location.href='https://expert-disco-g9prq7qq5q9hw7g9-8000.app.github.dev/about/'">View Appeal Status</button>
+</div>
+  {% else %}
+  <h2 class="greeting py-3">Welcome, User!</h2>
+</div>
+<div class="policy">
+  <h2>Dress Code for Male</h2>
+  <h4>Mondays and Tuesdays (Corporate Attire)</h4>
+  <ul>
+  <li>Long-sleeved or short-sleeved button-down shirt (tucked in)
+    with a necktie, or Barong (long-sleeved or short-sleeved with
+    plain white undershirt)</li>
+    <li>Corporate slacks (wool or cotton).</li>
+    <li>Office leather shoes (black or brown) with dark colored men’s
+      socks</li>
+  </ul>
+  <h4>Wednesdays and Thursdays (Smart Casual Attire)</h4>
+  <ul>
+    <li>Long-sleeved or short-sleeved button-down shirt, or Barong
+      (long-sleeved or short-sleeved with plain white undershirt)</li>
+    <li>Corporate slacks (wool or cotton).</li>
+    <li>Office leather shoes (black or brown) with dark colored men’s
+      socks</li>
+    </ul>
+    <h4>Fridays and Saturdays (Casual Attire)</h4>
+    <ul>
+      <li>T-shirt or polo shirt</li>
+      <li>Jeans, chinos, or jogger pants</li>
+      <li>Rubber shoes, topsiders, sneakers, loafers, etc., except
+        flip flops and slippers.</li>
+      </ul>
+</div>
+
 {% endif %}
 {% endblock content %}
