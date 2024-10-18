@@ -6,6 +6,8 @@
 {% block content %}
 <div class="pricing-header px-10 py-3 pt-md-2 pb-md-4 mx-left text-center">
   <img src="{% static 'images/mini-logo.png' %}" class="img-fluid" width="35%" alt="APC logo"/>
-  <p class="lead">Real Projects. Real Learning.</p>
+</div>
+<div>
+  <h2>Welcome, {{ user.username }}</h2>
 </div>
 {% endblock content %}
