@@ -90,12 +90,13 @@ ul {
 
 .greeting {
   margin-left: 100px;
+  color: white;
 }
 
 
 body {
   margin-bottom: 60px; /* Margin bottom by footer height */
-  background-color: rgb(160, 182, 245);
+  background: url("/static/images/Media.png") 50%;
 }
 
 .container {
