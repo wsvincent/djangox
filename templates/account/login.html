@@ -4,10 +4,19 @@
 {% block title %}Log in{% endblock %}
 
 {% block content %}
-<h2>Log in</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form|crispy }}
-  <button class="btn btn-success" type="submit">Log in</button>
-</form>
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card p-5 shadow-lg">
+          <h3 class="mb-5 text-center"><i class="bi bi-person-circle me-2 text"></i>Login</h3>
+          <form method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input class="btn btn-sm btn-primary mt-4 mb-2 w-100" type="submit" value="Login">
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}

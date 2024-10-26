@@ -5,14 +5,19 @@
 
 
 {% block content %}
-<h1>Sign Out</h1>
-
-<p>Are you sure you want to sign out?</p>
-
-<form method="post" action="{% url 'account_logout' %}">
-  {% csrf_token %}
-  {{ form|crispy }}
-  <button class="btn btn-danger" type="submit">Sign Out</button>
-</form>
-
+<div class="container my-5"></div>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div class="card p-5 shadow-lg text-center">
+        <h3 class="mb-5"><i class="bi bi-door-open-fill me-2"></i>Sign Out</h3>
+        <div>Are you sure you want to sign out?</div>
+        <form method="post" action="{% url 'account_logout' %}">
+          {% csrf_token %}
+          {{ form|crispy }}
+          <input class="btn btn-sm btn-primary mt-5 w-100" type="submit" value="Sign Out">
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock content %}
