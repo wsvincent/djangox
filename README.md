@@ -32,8 +32,8 @@ https://github.com/wsvincent/djangox/assets/766418/a73ea730-a7b4-4e53-bf51-aa68f
 Lithium can be installed via Pip or Docker. To start, clone the repo to your local computer and change into the proper directory.
 
 ```
-$ git clone https://github.com/wsvincent/djangox.git
-$ cd djangox
+$ git clone https://github.com/wsvincent/lithium.git
+$ cd lithium
 ```
 
 ### Pip
