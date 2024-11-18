@@ -11,7 +11,7 @@ https://github.com/wsvincent/djangox/assets/766418/a73ea730-a7b4-4e53-bf51-aa68f
 ## 🚀 Features
 
 - Django 5.1 & Python 3.12
-- Installation via [Pip](https://pypi.org/project/pip/) or [Docker](https://www.docker.com/)
+- Installation via [uv](https://docs.astral.sh/uv/) or [Docker](https://www.docker.com/)
 - User authentication--log in, sign up, password reset--via [django-allauth](https://github.com/pennersr/django-allauth)
 - Static files configured with [Whitenoise](http://whitenoise.evans.io/en/stable/index.html)
 - Styling with [Bootstrap v5](https://getbootstrap.com/)
@@ -21,7 +21,7 @@ https://github.com/wsvincent/djangox/assets/766418/a73ea730-a7b4-4e53-bf51-aa68f
 
 ## Table of Contents
 * **[Installation](#installation)**
-  * [Pip](#pip)
+  * [Uv](#uv)
   * [Docker](#docker)
 * [Next Steps](#next-steps)
 * [Contributing](#contributing)
@@ -36,29 +36,19 @@ $ git clone https://github.com/wsvincent/lithium.git
 $ cd lithium
 ```
 
-### Pip
-You can use [pip](https://pypi.org/project/pip/) to create a fresh virtual environment on either Windows or macOS.
+### Uv
+You can use [uv](https://docs.astral.sh/uv/) to create a dedicated virtual environment.
 
 ```
-# On Windows
-$ python -m venv .venv
-$ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-$ .venv\Scripts\Activate.ps1
-(.venv) $
-
-# On macOS
-$ python -m venv .venv
-$ source .venv/bin/activate
-(.venv) $
+$ uv sync
 ```
 
-Then install all packages hosted in `requirements.txt` and run `migrate` to configure the initial database. The command `createsuperuser` will create a new superuser account for accessing the admin. Execute the `runserver` commandt o start up the local server.
+Then run `migrate` to configure the initial database. The command `createsuperuser` will create a new superuser account for accessing the admin. Execute the `runserver` commandt o start up the local server.
 
 ```
-(.venv) $ pip install -r requirements.txt
-(.venv) $ python manage.py migrate
-(.venv) $ python manage.py createsuperuser
-(.venv) $ python manage.py runserver
+$ uv run manage.py migrate
+$ uv run manage.py createsuperuser
+$ uv run manage.py runserver
 # Load the site at http://127.0.0.1:8000 or http://127.0.0.1:8000/admin for the admin
 ```
 
