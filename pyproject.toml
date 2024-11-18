@@ -8,12 +8,11 @@ dependencies = [
   "django-debug-toolbar ~=4.4",
   "crispy-bootstrap5 ~=2024.10",
   "gunicorn ~=23.0",
-  "psycopg ~=3.2",
+  "psycopg[binary] ~=3.2",
   "whitenoise ~=6.7",
 ]
 
 [dependency-groups]
 dev = [
-  "psycopg-binary ~=3.2",
   "typing_extensions ~=4.12",
 ]
